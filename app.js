@@ -20,12 +20,7 @@ app.set("view engine", 'ejs');
 // })
 
 // get is a tool
-app.get('/',
-    (req, res, next) => {
-    console.log("this is middleware for / route")
-    return next();
-    },
-    (req, res) => {
+app.get('/', (req, res) => {
     res.render('index')
 })
 
