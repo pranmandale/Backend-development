@@ -13,7 +13,7 @@ app.use(morgan('dev'))
 app.set("view engine", 'ejs');
 
 // middleware 
-// if any of below route is going to fetch before this middleware execute
+// if any of below route is going to fetch, before this middleware execute
 // app.use((req, res, next) => {
 //     console.log("this is middleware")
 //     return next()
@@ -31,5 +31,5 @@ app.get('/about', (req,res) => {
 app.get('/profile', (req, res) => {
     res.send("profile page")
 })
-    ;
+    
 app.listen(3000)
